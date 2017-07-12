@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Max lines -->
+    <integer name="max_lines_1">1</integer>
+
+    <!-- Max length -->
+    <integer name="max_length_4">4</integer>
+    <integer name="max_length_5">5</integer>
+    <integer name="max_length_18">18</integer>
+
+    <!-- Progress count -->
+    <integer name="progress_count_max_100">100</integer>
+    <integer name="progress_count_25">25</integer>
+
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  System resource layout type-->
+    <string name="app_resource_values_type">values-xxxhdpi</string>
+
+</resources>

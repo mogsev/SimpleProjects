@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Base Content</string>
+
+    <!--  System resource layout type-->
+    <string name="app_resource_values_type">values</string>
+
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Radius -->
+    <dimen name="radius_dp_2">2dp</dimen>
+    <dimen name="radius_dp_4">4dp</dimen>
+    <dimen name="radius_dp_8">8dp</dimen>
+    <dimen name="radius_dp_10">10dp</dimen>
+    <dimen name="radius_dp_12">12dp</dimen>
+    <dimen name="radius_dp_14">14dp</dimen>
+    <dimen name="radius_dp_16">16dp</dimen>
+    <dimen name="radius_dp_18">18dp</dimen>
+    <dimen name="radius_dp_20">20dp</dimen>
+    <dimen name="radius_dp_22">22dp</dimen>
+    <dimen name="radius_dp_24">24dp</dimen>
+    <dimen name="radius_dp_26">26dp</dimen>
+    <dimen name="radius_dp_28">28dp</dimen>
+    <dimen name="radius_dp_30">30dp</dimen>
+    <dimen name="radius_dp_32">32dp</dimen>
+
+    <!-- Margin -->
+    <dimen name="margin_dp_2">2dp</dimen>
+    <dimen name="margin_dp_4">4dp</dimen>
+    <dimen name="margin_dp_6">6dp</dimen>
+    <dimen name="margin_dp_8">8dp</dimen>
+    <dimen name="margin_dp_10">10dp</dimen>
+    <dimen name="margin_dp_12">12dp</dimen>
+    <dimen name="margin_dp_14">14dp</dimen>
+    <dimen name="margin_dp_16">16dp</dimen>
+    <dimen name="margin_dp_18">18dp</dimen>
+    <dimen name="margin_dp_20">20dp</dimen>
+    <dimen name="margin_dp_22">22dp</dimen>
+    <dimen name="margin_dp_24">24dp</dimen>
+    <dimen name="margin_dp_26">26dp</dimen>
+    <dimen name="margin_dp_28">28dp</dimen>
+    <dimen name="margin_dp_30">30dp</dimen>
+    <dimen name="margin_dp_32">32dp</dimen>
+    <dimen name="margin_dp_48">48dp</dimen>
+
+    <!-- Padding -->
+    <dimen name="padding_dp_2">2dp</dimen>
+    <dimen name="padding_dp_4">4dp</dimen>
+    <dimen name="padding_dp_6">6dp</dimen>
+    <dimen name="padding_dp_8">8dp</dimen>
+    <dimen name="padding_dp_10">10dp</dimen>
+    <dimen name="padding_dp_12">12dp</dimen>
+    <dimen name="padding_dp_14">14dp</dimen>
+    <dimen name="padding_dp_16">16dp</dimen>
+    <dimen name="padding_dp_18">18dp</dimen>
+    <dimen name="padding_dp_20">20dp</dimen>
+    <dimen name="padding_dp_22">22dp</dimen>
+    <dimen name="padding_dp_24">24dp</dimen>
+    <dimen name="padding_dp_26">26dp</dimen>
+    <dimen name="padding_dp_28">28dp</dimen>
+    <dimen name="padding_dp_30">30dp</dimen>
+    <dimen name="padding_dp_32">32dp</dimen>
+
+    <!-- Line spacing extra -->
+    <dimen name="line_spacing_extra_dp_4">4dp</dimen>
+    <dimen name="line_spacing_extra_dp_6">6dp</dimen>
+    <dimen name="line_spacing_extra_dp_8">8dp</dimen>
+    <dimen name="line_spacing_extra_dp_10">10dp</dimen>
+    <dimen name="line_spacing_extra_dp_12">12dp</dimen>
+    <dimen name="line_spacing_extra_dp_16">16dp</dimen>
+
+    <!-- Elevation -->
+    <dimen name="elevation_dp_2">2dp</dimen>
+    <dimen name="elevation_dp_4">4dp</dimen>
+    <dimen name="elevation_dp_6">6dp</dimen>
+    <dimen name="elevation_dp_8">8dp</dimen>
+    <dimen name="elevation_dp_10">10dp</dimen>
+
+    <!-- Text size -->
+    <dimen name="text_size_sp_10">10sp</dimen>
+    <dimen name="text_size_sp_12">12sp</dimen>
+    <dimen name="text_size_sp_14">14sp</dimen>
+    <dimen name="text_size_sp_16">16sp</dimen>
+    <dimen name="text_size_sp_17">17sp</dimen>
+    <dimen name="text_size_sp_18">18sp</dimen>
+    <dimen name="text_size_sp_19">19sp</dimen>
+    <dimen name="text_size_sp_20">20sp</dimen>
+    <dimen name="text_size_sp_22">22sp</dimen>
+    <dimen name="text_size_sp_24">24sp</dimen>
+    <dimen name="text_size_sp_26">26sp</dimen>
+    <dimen name="text_size_sp_28">28sp</dimen>
+    <dimen name="text_size_sp_30">30sp</dimen>
+    <dimen name="text_size_sp_32">32sp</dimen>
+    <dimen name="text_size_sp_34">34sp</dimen>
+    <dimen name="text_size_sp_35">35sp</dimen>
+    <dimen name="text_size_sp_36">36sp</dimen>
+    <dimen name="text_size_sp_38">38sp</dimen>
+    <dimen name="text_size_sp_40">40sp</dimen>
+    <dimen name="text_size_sp_42">42sp</dimen>
+    <dimen name="text_size_sp_44">44sp</dimen>
+    <dimen name="text_size_sp_46">46sp</dimen>
+    <dimen name="text_size_sp_48">48sp</dimen>
+    <dimen name="text_size_sp_50">50sp</dimen>
+
+    <!-- Divider height -->
+    <dimen name="divider_height_dp_1">1dp</dimen>
+    <dimen name="divider_height_dp_2">2dp</dimen>
+    <dimen name="divider_height_px_1">1px</dimen>
+    <dimen name="divider_height_px_2">2px</dimen>
+    <dimen name="divider_height_px_3">3px</dimen>
+
+</resources>
