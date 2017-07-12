@@ -36,8 +36,7 @@ public class TimeCounterService extends Service {
 
         createNotification();
 
-        startForeground(NOTIFICATION, mNotification);
-        mTimeCounterViewModel.start();
+        //startForeground(NOTIFICATION, mNotification);
     }
 
     @Override
@@ -50,7 +49,7 @@ public class TimeCounterService extends Service {
         super.onDestroy();
         Log.i(TAG, "onDestroy");
         mTimeCounterViewModel.stop();
-        stopForeground(true);
+        //stopForeground(true);
         stopSelf();
     }
 

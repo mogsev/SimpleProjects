@@ -55,10 +55,24 @@ public class FirstFragment extends Fragment implements ServiceConnection {
         Log.i(TAG, "onActivityCreated");
         Intent intent = new Intent(getContext(), TimeCounterService.class);
         getContext().bindService(intent, this, Context.BIND_AUTO_CREATE);
+        getView().postDelayed(() -> {
+            if (mTimeCounterService != null) mTimeCounterService.getTimeCounterViewModel().stop();
+        }, 20000);
+
+        getView().postDelayed(() -> {
+            if (mTimeCounterService != null) mTimeCounterService.getTimeCounterViewModel().start();
+        }, 30000);
 
         getView().postDelayed(() -> {
             if (mTimeCounterService != null) mTimeCounterService.getTimeCounterViewModel().stop();
-        }, 10000);
+        }, 60000);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Log.i(TAG, "onDestroyView");
+        if (mTimeCounterService != null) mTimeCounterService.unbindService(this);
     }
 
     // ******************************* Implements ServiceConnection ******************************

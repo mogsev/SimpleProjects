@@ -1,4 +1,4 @@
-package com.mogsev.simpleprojects.utils;
+package com.mogsev.simpleprojects.engine;
 
 import android.databinding.ObservableLong;
 import android.util.Log;
@@ -40,7 +40,6 @@ public final class TimeCounter {
 
     public void start() {
         mMillis = 0;
-        updateMillis();
         mTimerTask = createTimerTask();
         mTimer.scheduleAtFixedRate(mTimerTask, ONE_SECOND, ONE_SECOND);
     }
@@ -48,14 +47,6 @@ public final class TimeCounter {
     public void stop() {
         if (mTimerTask != null) mTimerTask.cancel();
         mTimer.purge();
-    }
-
-    public long getMillis() {
-        return mMillis;
-    }
-
-    public long getMinutes() {
-        return mMillis / ONE_SECOND / SECONDS_IN_MINUTE;
     }
 
     public ObservableLong getObservableMillis() {

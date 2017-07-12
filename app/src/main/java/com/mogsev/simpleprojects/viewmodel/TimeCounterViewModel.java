@@ -1,18 +1,16 @@
 package com.mogsev.simpleprojects.viewmodel;
 
 import android.databinding.BaseObservable;
-import android.databinding.Bindable;
 import android.databinding.ObservableBoolean;
-import android.databinding.ObservableField;
 import android.databinding.ObservableLong;
 
-import com.mogsev.simpleprojects.utils.TimeCounter;
+import com.mogsev.simpleprojects.engine.TimeCounter;
 
 /**
  * Created by Eugene Sikaylo on 12.07.2017.
  */
-
 public class TimeCounterViewModel extends BaseObservable {
+    private static final String TAG = TimeCounterViewModel.class.getSimpleName();
 
     public final TimeCounter mTimeCounter = new TimeCounter();
 
