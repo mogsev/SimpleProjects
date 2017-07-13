@@ -12,8 +12,8 @@ import com.mogsev.basecontent.adapter.BaseRecyclerListAdapter;
  * Created by Eugene Sikaylo on 13.07.2017.
  */
 
-public class CatOneRvAdapter extends BaseRecyclerListAdapter {
-    private static final String TAG = CatOneRvAdapter.class.getSimpleName();
+public class UsersRvAdapter extends BaseRecyclerListAdapter {
+    private static final String TAG = UsersRvAdapter.class.getSimpleName();
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
