@@ -26,6 +26,7 @@ public class MainService extends Service {
     private final CompositeDisposable mDisposable = new CompositeDisposable();
 
     private Disposable mTimerDisposable;
+
     Flowable<Long> flowable;
 
     @Override

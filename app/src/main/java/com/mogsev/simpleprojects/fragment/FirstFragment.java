@@ -17,7 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mogsev.simpleprojects.R;
-import com.mogsev.simpleprojects.databinding.FragmentFirstBinding;
+import com.mogsev.simpleprojects.databindingt.FragmentFirstBinding;
 import com.mogsev.simpleprojects.service.TimeCounterService;
 
 public class FirstFragment extends Fragment implements ServiceConnection {
