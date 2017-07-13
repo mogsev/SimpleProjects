@@ -7,10 +7,10 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +24,7 @@ public class FirstFragment extends Fragment implements ServiceConnection {
     private static final String TAG = FirstFragment.class.getSimpleName();
 
     private TimeCounterService mTimeCounterService;
+    private boolean mTimeCounterServiceBound = false;
 
     private FragmentFirstBinding mBinding;
 
@@ -53,8 +54,6 @@ public class FirstFragment extends Fragment implements ServiceConnection {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Log.i(TAG, "onActivityCreated");
-        Intent intent = new Intent(getContext(), TimeCounterService.class);
-        getContext().bindService(intent, this, Context.BIND_AUTO_CREATE);
         getView().postDelayed(() -> {
             if (mTimeCounterService != null) mTimeCounterService.getTimeCounterViewModel().stop();
         }, 20000);
@@ -66,13 +65,30 @@ public class FirstFragment extends Fragment implements ServiceConnection {
         getView().postDelayed(() -> {
             if (mTimeCounterService != null) mTimeCounterService.getTimeCounterViewModel().stop();
         }, 60000);
+
+        mBinding.button.setOnClickListener((v) -> {
+            openSecondFragment();
+        });
     }
 
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        Log.i(TAG, "onDestroyView");
-        if (mTimeCounterService != null) mTimeCounterService.unbindService(this);
+    public void onStart() {
+        super.onStart();
+        Log.i(TAG, "onStart");
+        // bind to service
+        Intent intent = new Intent(getContext(), TimeCounterService.class);
+        getContext().bindService(intent, this, 0);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.i(TAG, "onStop");
+        // Unbind from the service
+        if (mTimeCounterServiceBound) {
+            getContext().unbindService(this);
+            mTimeCounterServiceBound = false;
+        }
     }
 
     // ******************************* Implements ServiceConnection ******************************
@@ -81,14 +97,24 @@ public class FirstFragment extends Fragment implements ServiceConnection {
         Log.i(TAG, "onServiceConnected");
         TimeCounterService.TimeCounterBinder binder = (TimeCounterService.TimeCounterBinder) iBinder;
         mTimeCounterService = binder.getService();
-        mTimeCounterService.getTimeCounterViewModel().start();
+        mTimeCounterServiceBound = true;
         mBinding.setTimeCounter(mTimeCounterService.getTimeCounterViewModel());
+
     }
 
     @Override
     public void onServiceDisconnected(ComponentName componentName) {
         Log.i(TAG, "onServiceDisconnected");
-        mTimeCounterService = null;
+        mTimeCounterServiceBound = false;
     }
     // ******************************* Implements ServiceConnection ******************************
+
+    public void openSecondFragment() {
+        SecondFragment fragment = SecondFragment.newInstance();
+        getFragmentManager().beginTransaction()
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .replace(R.id.frame_container, fragment, fragment.getClass().getSimpleName())
+                .addToBackStack(null)
+                .commit();
+    }
 }

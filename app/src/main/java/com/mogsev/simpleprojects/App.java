@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.util.Log;
 
 import com.mogsev.basecontent.BaseApplication;
+import com.mogsev.simpleprojects.service.MainService;
 import com.mogsev.simpleprojects.service.TimeCounterService;
 
 /**
@@ -20,6 +21,8 @@ public class App extends BaseApplication {
 
         // start service
         startService(new Intent(this, TimeCounterService.class));
+
+        startService(new Intent(this, MainService.class));
     }
 
 }
