@@ -2,7 +2,6 @@ package com.mogsev.simpleprojects.fragment;
 
 
 import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.databinding.DataBindingUtil;
@@ -17,7 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mogsev.simpleprojects.R;
-import com.mogsev.simpleprojects.databindingt.FragmentFirstBinding;
+import com.mogsev.simpleprojects.databinding.FragmentFirstBinding;
 import com.mogsev.simpleprojects.service.TimeCounterService;
 
 public class FirstFragment extends Fragment implements ServiceConnection {
@@ -65,10 +64,7 @@ public class FirstFragment extends Fragment implements ServiceConnection {
         getView().postDelayed(() -> {
             if (mTimeCounterService != null) mTimeCounterService.getTimeCounterViewModel().stop();
         }, 60000);
-
-        mBinding.button.setOnClickListener((v) -> {
-            openSecondFragment();
-        });
+        mBinding.setFragment(this);
     }
 
     @Override
@@ -99,7 +95,6 @@ public class FirstFragment extends Fragment implements ServiceConnection {
         mTimeCounterService = binder.getService();
         mTimeCounterServiceBound = true;
         mBinding.setTimeCounter(mTimeCounterService.getTimeCounterViewModel());
-
     }
 
     @Override
@@ -109,12 +104,23 @@ public class FirstFragment extends Fragment implements ServiceConnection {
     }
     // ******************************* Implements ServiceConnection ******************************
 
-    public void openSecondFragment() {
+    public boolean openSecondFragment() {
         SecondFragment fragment = SecondFragment.newInstance();
         getFragmentManager().beginTransaction()
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                 .replace(R.id.frame_container, fragment, fragment.getClass().getSimpleName())
                 .addToBackStack(null)
                 .commit();
+        return true;
+    }
+
+    public boolean openExpandableFragment() {
+        ExpandableFragment fragment = ExpandableFragment.newInstance();
+        getFragmentManager().beginTransaction()
+                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .replace(R.id.frame_container, fragment, fragment.getClass().getSimpleName())
+                .addToBackStack(null)
+                .commit();
+        return true;
     }
 }
