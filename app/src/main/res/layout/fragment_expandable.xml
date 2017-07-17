@@ -4,7 +4,9 @@
 
     <data>
 
-        <import type="android.view.View" />
+        <import
+            alias="view"
+            type="android.view.View" />
 
         <variable
             name="fragment"
@@ -41,7 +43,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:nestedScrollingEnabled="false"
-                    android:visibility="@{fragment.mGoodsRvVisible ? View.VISIBLE : View.GONE}"
+                    android:visibility="@{fragment.mGoodsRvVisible ? view.VISIBLE : view.GONE}"
                     app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
 
             </LinearLayout>
@@ -65,7 +67,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:nestedScrollingEnabled="false"
-                    android:visibility="@{fragment.mUsersRvVisible ? View.VISIBLE : View.GONE}"
+                    android:visibility="@{fragment.mUsersRvVisible ? view.VISIBLE : view.GONE}"
                     app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
 
             </LinearLayout>
@@ -80,8 +82,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:padding="@dimen/padding_dp_16"
                     android:onClick="@{() -> fragment.onClickTariffs()}"
+                    android:padding="@dimen/padding_dp_16"
                     android:text="User 3" />
 
                 <android.support.v7.widget.RecyclerView
@@ -89,8 +91,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:nestedScrollingEnabled="false"
-                    app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-                    android:visibility="@{fragment.mTariffsRvVisible ? View.VISIBLE : View.GONE}" />
+                    android:visibility="@{fragment.mTariffsRvVisible ? view.VISIBLE : view.GONE}"
+                    app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
 
             </LinearLayout>
 
@@ -111,7 +113,9 @@
                     android:id="@+id/fourth_recycler_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="@{fragment.mFourthRvVisible ? View.VISIBLE : View.GONE}" />
+                    android:nestedScrollingEnabled="false"
+                    android:visibility="@{fragment.mFourthRvVisible ? view.VISIBLE : view.GONE}"
+                    app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
 
             </LinearLayout>
 
@@ -132,7 +136,9 @@
                     android:id="@+id/fifth_recycler_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:visibility="@{fragment.mFifthRvVisible ? View.VISIBLE : View.GONE}" />
+                    android:nestedScrollingEnabled="false"
+                    android:visibility="@{fragment.mFifthRvVisible ? view.VISIBLE : view.GONE}"
+                    app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
 
             </LinearLayout>
 

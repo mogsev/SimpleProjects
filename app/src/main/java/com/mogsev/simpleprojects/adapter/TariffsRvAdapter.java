@@ -4,6 +4,7 @@ import android.databinding.BindingAdapter;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +35,7 @@ public class TariffsRvAdapter extends BaseRecyclerListAdapter {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         Tariff tariff = (Tariff) mList.get(position);
         if (holder instanceof TariffViewHolder) {
-            ((TariffViewHolder) holder).binding.setVariable(BR.tariff, tariff);
+            ((TariffViewHolder) holder).setTariff(tariff);
         }
     }
 
@@ -43,24 +44,34 @@ public class TariffsRvAdapter extends BaseRecyclerListAdapter {
      */
     public static class TariffViewHolder extends RecyclerView.ViewHolder {
 
-        private ViewDataBinding binding;
+        private ItemTariffBinding binding;
 
         public TariffViewHolder(View itemView) {
             super(itemView);
             binding = DataBindingUtil.bind(itemView);
-
+            binding.tariffItem.setOnClickListener((v) -> {
+                onClickVisibility();
+            });
         }
 
-        public ViewDataBinding getBinding() {
-            return binding;
+        public void setTariff(Tariff tariff) {
+            binding.setVariable(BR.tariff, tariff);
+            binding.executePendingBindings();
+        }
+
+        public boolean onClickVisibility() {
+            Log.i(TAG, "onClickSecond");
+            boolean boo = binding.recyclerViewTariffUsers.getVisibility() == View.VISIBLE;
+            binding.recyclerViewTariffUsers.setVisibility(!boo ? View.VISIBLE: View.GONE);
+            return true;
         }
     }
 
-
-    @BindingAdapter({"bind:users"})
-    public static void loadImage(RecyclerView recyclerView, List<User> list) {
+    @BindingAdapter({"bind:setListOfUsers"})
+    public static void setListOfUsers(RecyclerView recyclerView, Tariff tariff) {
+        Log.i(TAG, "setListOfUsers");
         UsersRvAdapter adapter = new UsersRvAdapter();
-        adapter.addAll(list);
+        adapter.addAll(tariff.getUsers());
         recyclerView.setAdapter(adapter);
     }
 }

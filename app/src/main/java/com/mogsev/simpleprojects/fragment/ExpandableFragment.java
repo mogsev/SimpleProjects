@@ -78,6 +78,7 @@ public class ExpandableFragment extends Fragment {
         initUsersRecyclerView();
 
         // initialize recycler view tariffs
+        initTariffsRecyclerView();
     }
 
     public boolean onClickFirst() {
@@ -128,6 +129,6 @@ public class ExpandableFragment extends Fragment {
         Gson gson = new Gson();
         Type type = new TypeToken<List<Tariff>>() {}.getType();
         List<Tariff> list = gson.fromJson(json, type);
-        mUsersRvAdapter.addAll(list);
+        mTariffsRvAdapter.addAll(list);
     }
 }
