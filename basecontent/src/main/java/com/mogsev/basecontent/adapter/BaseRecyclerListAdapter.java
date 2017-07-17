@@ -48,6 +48,14 @@ public abstract class BaseRecyclerListAdapter<M, VH extends RecyclerView.ViewHol
     @Override
     public void addAll(Collection<M> data) {
         Log.i(TAG, "addAll");
+        if (data == null) { // check if data is null
+            Log.e(TAG, "Data is null");
+            return;
+        }
+        if (data.isEmpty()) { // check if data is empty
+            Log.e(TAG, "Data is empty");
+            return;
+        }
         for (M item : data) {
             addInternal(item);
         }

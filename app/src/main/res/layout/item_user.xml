@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.mogsev.simpleprojects.data.entity.User" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="id"
+            android:text='@{String.format("id: %1$d", user.id)}' />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="first name"
+            android:text='@{String.format("First name: %1$s", user.firstName)}' />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="last name"
+            android:text='@{String.format("Last name: %1$s", user.lastName)}' />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="full name"
+            android:text='@{String.format("Full name: %1$s", user.fullName)}' />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="age"
+            android:text='@{String.format("Age: %1$d", user.age)}' />
+
+    </LinearLayout>
+
+</layout>

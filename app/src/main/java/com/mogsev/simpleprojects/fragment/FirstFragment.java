@@ -117,7 +117,7 @@ public class FirstFragment extends Fragment implements ServiceConnection {
     public boolean openExpandableFragment() {
         ExpandableFragment fragment = ExpandableFragment.newInstance();
         getFragmentManager().beginTransaction()
-                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                .setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left)
                 .replace(R.id.frame_container, fragment, fragment.getClass().getSimpleName())
                 .addToBackStack(null)
                 .commit();

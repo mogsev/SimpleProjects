@@ -1,6 +1,12 @@
 package com.mogsev.simpleprojects.data.entity;
 
+import android.databinding.BindingAdapter;
+import android.support.v7.widget.RecyclerView;
+
 import com.google.gson.annotations.SerializedName;
+import com.mogsev.simpleprojects.adapter.UsersRvAdapter;
+
+import java.util.List;
 
 /**
  * Created by Eugene Sikaylo (mogsev@gmail.com).
@@ -19,6 +25,9 @@ public class Tariff {
 
     @SerializedName("info")
     private String info;
+
+    @SerializedName("users")
+    private List<User> users;
 
     public Tariff() {
 
@@ -56,6 +65,14 @@ public class Tariff {
         this.info = info;
     }
 
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
+
     @Override
     public String toString() {
         return "Tariff{" +
@@ -63,6 +80,7 @@ public class Tariff {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", info='" + info + '\'' +
+                ", users=" + users +
                 '}';
     }
 }
