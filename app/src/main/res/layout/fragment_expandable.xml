@@ -21,18 +21,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:animateLayoutChanges="true"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:animateLayoutChanges="true"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
                     android:gravity="center"
                     android:onClick="@{() -> fragment.onClickFirst()}"
                     android:padding="@dimen/padding_dp_16"
@@ -42,6 +41,7 @@
                     android:id="@+id/recycler_view_goods"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:isScrollContainer="false"
                     android:nestedScrollingEnabled="false"
                     android:visibility="@{fragment.mGoodsRvVisible ? view.VISIBLE : view.GONE}"
                     app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
@@ -51,12 +51,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:animateLayoutChanges="true"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
                     android:gravity="center"
                     android:onClick="@{() -> fragment.onClickSecond()}"
                     android:padding="@dimen/padding_dp_16"
@@ -66,6 +66,7 @@
                     android:id="@+id/recycler_view_users"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:isScrollContainer="false"
                     android:nestedScrollingEnabled="false"
                     android:visibility="@{fragment.mUsersRvVisible ? view.VISIBLE : view.GONE}"
                     app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
@@ -75,21 +76,22 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:animateLayoutChanges="true"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
                     android:gravity="center"
                     android:onClick="@{() -> fragment.onClickTariffs()}"
                     android:padding="@dimen/padding_dp_16"
-                    android:text="User 3" />
+                    android:text="Tariffs" />
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recycler_view_tariffs"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:isScrollContainer="false"
                     android:nestedScrollingEnabled="false"
                     android:visibility="@{fragment.mTariffsRvVisible ? view.VISIBLE : view.GONE}"
                     app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
@@ -99,22 +101,24 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:animateLayoutChanges="true"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
                     android:gravity="center"
+                    android:onClick="@{() -> fragment.onClickOrders()}"
                     android:padding="@dimen/padding_dp_16"
-                    android:text="User 4" />
+                    android:text="Orders" />
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/fourth_recycler_view"
+                    android:id="@+id/recycler_view_orders"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:isScrollContainer="false"
                     android:nestedScrollingEnabled="false"
-                    android:visibility="@{fragment.mFourthRvVisible ? view.VISIBLE : view.GONE}"
+                    android:visibility="@{fragment.mOrdersRvVisible ? view.VISIBLE : view.GONE}"
                     app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
 
             </LinearLayout>
@@ -122,12 +126,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:animateLayoutChanges="true"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
                     android:gravity="center"
                     android:padding="@dimen/padding_dp_16"
                     android:text="User 5" />
@@ -136,6 +140,7 @@
                     android:id="@+id/fifth_recycler_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:isScrollContainer="false"
                     android:nestedScrollingEnabled="false"
                     android:visibility="@{fragment.mFifthRvVisible ? view.VISIBLE : view.GONE}"
                     app:layoutManager="android.support.v7.widget.LinearLayoutManager" />

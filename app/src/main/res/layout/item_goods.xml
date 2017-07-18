@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="@color/colorOrange100"
         android:padding="@dimen/padding_dp_8">
 
         <ImageView

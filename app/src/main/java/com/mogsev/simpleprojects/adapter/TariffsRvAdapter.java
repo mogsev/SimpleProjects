@@ -1,8 +1,6 @@
 package com.mogsev.simpleprojects.adapter;
 
-import android.databinding.BindingAdapter;
 import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,7 +10,6 @@ import android.view.ViewGroup;
 import com.mogsev.basecontent.adapter.BaseRecyclerListAdapter;
 import com.mogsev.simpleprojects.BR;
 import com.mogsev.simpleprojects.data.entity.Tariff;
-import com.mogsev.simpleprojects.data.entity.User;
 import com.mogsev.simpleprojects.databinding.ItemTariffBinding;
 
 import java.util.List;
@@ -67,11 +64,4 @@ public class TariffsRvAdapter extends BaseRecyclerListAdapter {
         }
     }
 
-    @BindingAdapter({"bind:setListOfUsers"})
-    public static void setListOfUsers(RecyclerView recyclerView, Tariff tariff) {
-        Log.i(TAG, "setListOfUsers");
-        UsersRvAdapter adapter = new UsersRvAdapter();
-        adapter.addAll(tariff.getUsers());
-        recyclerView.setAdapter(adapter);
-    }
 }
