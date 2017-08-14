@@ -3,6 +3,8 @@ package com.mogsev.forservice.engine;
 import android.databinding.ObservableBoolean;
 import android.databinding.ObservableField;
 import android.databinding.ObservableLong;
+import android.os.Handler;
+import android.os.HandlerThread;
 import android.util.Log;
 import android.util.Pair;
 
@@ -36,7 +38,14 @@ public final class TimeCounter {
 
     private TimeCounterState mTimeCounterState;
 
+    private final HandlerThread handlerThread = new HandlerThread("TimeCounter");
+    private final Handler mHandler;
+
     public TimeCounter() {
+        // create handler
+        handlerThread.start();
+        mHandler = new Handler(handlerThread.getLooper());
+
         mWorking = new ObservableBoolean();
         mObservableMillis = new ObservableLong(mMillis);
         mTimeFormat = new ObservableField<>();
@@ -61,8 +70,10 @@ public final class TimeCounter {
                             Log.i(TAG, "Timer: " + aLong);
                             mMillis = aLong.longValue() * 1000 + millis;
                             mObservableMillis.set(mMillis);
-                            updateTimeFormat(mMillis);
-                            onSaveInstanceState(mMillis, true);
+                            mHandler.post(() -> {
+                                    updateTimeFormat(mMillis);
+                                    onSaveInstanceState(mMillis, true);
+                            });
                         }, throwable -> {
                             throwable.printStackTrace();
                         }

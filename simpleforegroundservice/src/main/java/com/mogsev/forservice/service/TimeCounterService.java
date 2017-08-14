@@ -10,6 +10,7 @@ import android.util.Log;
 import com.mogsev.forservice.ITimeCounterService;
 import com.mogsev.forservice.R;
 import com.mogsev.forservice.aidlmodel.Punch;
+import com.mogsev.forservice.engine.TimeCounter;
 import com.mogsev.forservice.viewmodel.TimeCounterViewModel;
 
 
@@ -20,7 +21,7 @@ public class TimeCounterService extends Service {
 
     private Notification mNotification;
 
-    private TimeCounterViewModel mViewModel;
+    private TimeCounter mTimeCounter = new TimeCounter();
 
     public TimeCounterService() {
     }
@@ -30,9 +31,9 @@ public class TimeCounterService extends Service {
         super.onCreate();
         Log.i(TAG, "onCreate");
 
-        startForeground();
+        //startForeground();
 
-        mViewModel.startPunchIn();
+        //mViewModel.startPunchIn();
     }
 
     @Override
@@ -78,11 +79,28 @@ public class TimeCounterService extends Service {
     private final ITimeCounterService.Stub mBinder = new ITimeCounterService.Stub() {
 
         public long getMillis() {
-            return 1001;
+            Log.i(TAG, "getMillis");
+            return mTimeCounter.getObservableMillis().get();
+        }
+
+        public long getMinutes() {
+            return mTimeCounter.getMinutes();
         }
 
         public Punch getPunch() {
-            return new Punch();
+            Punch punch = new Punch();
+            punch.setMillis(mTimeCounter.getObservableMillis().get());
+            return punch;
+        }
+
+        public void start() {
+            startForeground();
+            mTimeCounter.start();
+        }
+
+        public void stop() {
+            mTimeCounter.stop();
+            stopForeground(true);
         }
 
     };
