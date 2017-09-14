@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.mogsev.simpleprojects.fragment.FirstFragment;
+import com.mogsev.simpleprojects.model.User;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();

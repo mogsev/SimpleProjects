@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/basecontent" />
             <option value="$PROJECT_DIR$/simpleforegroundservice" />
+            <option value="$PROJECT_DIR$/testapplication" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

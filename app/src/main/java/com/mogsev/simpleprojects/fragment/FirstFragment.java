@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mogsev.simpleprojects.R;
+import com.mogsev.simpleprojects.activity.LocationActivity;
 import com.mogsev.simpleprojects.databinding.FragmentFirstBinding;
 import com.mogsev.simpleprojects.service.TimeCounterService;
 
@@ -121,6 +122,12 @@ public class FirstFragment extends Fragment implements ServiceConnection {
                 .replace(R.id.frame_container, fragment, fragment.getClass().getSimpleName())
                 .addToBackStack(null)
                 .commit();
+        return true;
+    }
+
+    public boolean openLocationActivity() {
+        Intent intent = new Intent(getContext(), LocationActivity.class);
+        startActivity(intent);
         return true;
     }
 }
