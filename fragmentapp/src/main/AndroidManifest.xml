@@ -18,7 +18,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".gui.activities.SecondActivity" />
-        <activity android:name=".gui.activities.ThirdActivity"></activity>
+        <activity android:name=".gui.activities.ThirdActivity" />
+        <activity android:name=".gui.activities.FourthActivity" />
+        <activity
+            android:name=".gui.activities.MenuActivity"
+            android:label="@string/title_activity_menu"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

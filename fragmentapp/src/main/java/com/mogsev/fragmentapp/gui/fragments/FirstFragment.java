@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.mogsev.fragmentapp.R;
 import com.mogsev.fragmentapp.databinding.FragmentFirstBinding;
+import com.mogsev.fragmentapp.gui.activities.MenuActivity;
 import com.mogsev.fragmentapp.gui.activities.SecondActivity;
 import com.mogsev.fragmentapp.gui.activities.ThirdActivity;
 import com.mogsev.fragmentapp.utils.Logger;
@@ -48,6 +49,7 @@ public class FirstFragment extends Fragment implements View.OnClickListener {
         mBinding.buttonOpenFourthFragment.setOnClickListener(this);
         mBinding.buttonOpenSecondActivity.setOnClickListener(this);
         mBinding.buttonOpenThirdActivity.setOnClickListener(this);
+        mBinding.buttonOpenMenuActivity.setOnClickListener(this);
     }
 
     @Override
@@ -77,6 +79,10 @@ public class FirstFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.button_open_third_activity:
                 intent = new Intent(getContext(), ThirdActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.button_open_menu_activity:
+                intent = new Intent(getContext(), MenuActivity.class);
                 startActivity(intent);
                 break;
             default:
