@@ -1,1 +1,1 @@
-include ':app', ':basecontent', ':simpleforegroundservice', ':testapplication'
+include ':app', ':basecontent', ':simpleforegroundservice', ':testapplication', ':fragmentapp'
