@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mogsev.settingsapplication.MainActivity">
+
+    <data>
+
+        <variable
+            name="view"
+            type="android.view.View" />
+
+        <variable
+            name="settingsBusiness"
+            type="com.mogsev.settingsapplication.business.SettingsBusiness" />
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <TextView
+            android:id="@+id/text_view_first"
+            android:layout_width="@dimen/width_dp_0"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_bright"
+            android:gravity="center"
+            android:padding="@dimen/padding_dp_16"
+            android:text="First Hello World"
+            android:visibility="@{settingsBusiness.mFirstType ? view.VISIBLE : view.GONE}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_second"
+            android:layout_width="@dimen/width_dp_0"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_light"
+            android:gravity="center"
+            android:padding="@dimen/padding_dp_16"
+            android:text="Second Hello World!"
+            android:visibility="@{settingsBusiness.mSecondType ? view.VISIBLE : view.GONE}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_first" />
+
+        <TextView
+            android:id="@+id/text_view_third"
+            android:layout_width="@dimen/width_dp_0"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_light"
+            android:gravity="center"
+            android:padding="@dimen/padding_dp_16"
+            android:text="Third Hello World!"
+            android:visibility="@{settingsBusiness.mThirdType ? view.VISIBLE : view.GONE}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_second" />
+
+        <Switch
+            android:id="@+id/switch_first"
+            android:layout_width="@dimen/width_dp_0"
+            android:layout_height="wrap_content"
+            android:checked="@{settingsBusiness.mFirstType}"
+            android:foreground="?attr/selectableItemBackground"
+            android:onCheckedChanged="@{(switch, checked) -> settingsBusiness.onCheckedChanged(checked, 1)}"
+            android:padding="@dimen/padding_dp_16"
+            android:saveEnabled="false"
+            android:text="First"
+            android:textSize="@dimen/text_size_sp_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_third" />
+
+        <Switch
+            android:id="@+id/switch_second"
+            android:layout_width="@dimen/width_dp_0"
+            android:layout_height="wrap_content"
+            android:checked="@{settingsBusiness.mSecondType}"
+            android:foreground="?attr/selectableItemBackground"
+            android:onCheckedChanged="@{(switch, checked) -> settingsBusiness.onCheckedChanged(checked, 2)}"
+            android:padding="@dimen/padding_dp_16"
+            android:saveEnabled="false"
+            android:text="Second"
+            android:textSize="@dimen/text_size_sp_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch_first" />
+
+        <Switch
+            android:id="@+id/switch_third"
+            android:layout_width="@dimen/width_dp_0"
+            android:layout_height="wrap_content"
+            android:checked="@{settingsBusiness.mThirdType}"
+            android:foreground="?attr/selectableItemBackground"
+            android:onCheckedChanged="@{(switch, checked) -> settingsBusiness.onCheckedChanged(checked, 3)}"
+            android:padding="@dimen/padding_dp_16"
+            android:saveEnabled="false"
+            android:text="Third"
+            android:textSize="@dimen/text_size_sp_20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch_second" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

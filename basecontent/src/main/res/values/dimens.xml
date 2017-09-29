@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- width -->
+    <dimen name="width_px_1">1px</dimen>
+
+    <dimen name="width_dp_0">0dp</dimen>
+    <dimen name="width_dp_1">1dp</dimen>
+    <dimen name="width_dp_2">2dp</dimen>
+    <dimen name="width_dp_4">4dp</dimen>
+    <dimen name="width_dp_8">8dp</dimen>
+    <dimen name="width_dp_10">10dp</dimen>
+    <dimen name="width_dp_12">12dp</dimen>
+    <dimen name="width_dp_16">16dp</dimen>
+    <dimen name="width_dp_32">32dp</dimen>
+
+    <!-- height -->
+    <dimen name="height_px_1">1px</dimen>
+
+    <dimen name="height_dp_0">0dp</dimen>
+    <dimen name="height_dp_1">1dp</dimen>
+    <dimen name="height_dp_2">2dp</dimen>
+    <dimen name="height_dp_4">4dp</dimen>
+    <dimen name="height_dp_8">8dp</dimen>
+    <dimen name="height_dp_10">10dp</dimen>
+    <dimen name="height_dp_12">12dp</dimen>
+    <dimen name="height_dp_16">16dp</dimen>
+    <dimen name="height_dp_32">32dp</dimen>
+
     <!-- Radius -->
     <dimen name="radius_dp_2">2dp</dimen>
     <dimen name="radius_dp_4">4dp</dimen>
