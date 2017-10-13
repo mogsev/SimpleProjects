@@ -15,10 +15,10 @@ import com.mogsev.fragmentapp.databinding.FragmentFirstBinding;
 import com.mogsev.fragmentapp.gui.activities.MenuActivity;
 import com.mogsev.fragmentapp.gui.activities.SecondActivity;
 import com.mogsev.fragmentapp.gui.activities.ThirdActivity;
-import com.mogsev.fragmentapp.utils.Logger;
+
+import timber.log.Timber;
 
 public class FirstFragment extends Fragment implements View.OnClickListener {
-    private static final String TAG = FirstFragment.class.getSimpleName();
 
     private FragmentFirstBinding mBinding;
 
@@ -34,6 +34,7 @@ public class FirstFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Timber.i("onCreate");
     }
 
     @Override
@@ -45,6 +46,7 @@ public class FirstFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        Timber.i("onViewCreated");
         mBinding.buttonOpenSecondFragment.setOnClickListener(this);
         mBinding.buttonOpenFourthFragment.setOnClickListener(this);
         mBinding.buttonOpenSecondActivity.setOnClickListener(this);
@@ -86,7 +88,7 @@ public class FirstFragment extends Fragment implements View.OnClickListener {
                 startActivity(intent);
                 break;
             default:
-                Logger.i(TAG, "default onClick");
+                Timber.i("default onClick");
                 break;
         }
     }

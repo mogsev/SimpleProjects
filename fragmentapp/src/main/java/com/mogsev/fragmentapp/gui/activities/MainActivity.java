@@ -6,16 +6,16 @@ import android.os.Bundle;
 
 import com.mogsev.fragmentapp.R;
 import com.mogsev.fragmentapp.gui.fragments.FirstFragment;
-import com.mogsev.fragmentapp.utils.Logger;
+
+import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Logger.i(TAG, "onCreate");
+        Timber.i("onCreate");
 
         Fragment fragment = FirstFragment.newInstance();
         getSupportFragmentManager().beginTransaction()

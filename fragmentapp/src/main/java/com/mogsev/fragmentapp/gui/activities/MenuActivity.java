@@ -14,16 +14,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.mogsev.fragmentapp.R;
-import com.mogsev.fragmentapp.utils.Logger;
+
+import timber.log.Timber;
 
 public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    private static final String TAG = MenuActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Logger.i(TAG, "onCreate");
+        Timber.i("onCreate");
         setContentView(R.layout.activity_menu);
         overridePendingTransition(R.anim.slide_top_enter, R.anim.slide_top_exit);
 

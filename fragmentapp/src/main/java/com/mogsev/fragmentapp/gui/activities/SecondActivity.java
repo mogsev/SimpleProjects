@@ -4,15 +4,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.mogsev.fragmentapp.R;
-import com.mogsev.fragmentapp.utils.Logger;
+
+import timber.log.Timber;
 
 public class SecondActivity extends AppCompatActivity {
-    private static final String TAG = SecondActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Logger.i(TAG, "onCreate");
+        Timber.i("onCreate");
         setContentView(R.layout.activity_second);
         overridePendingTransition(R.anim.slide_right_enter, R.anim.slide_right_exit);
     }

@@ -9,8 +9,9 @@ import android.view.ViewGroup;
 
 import com.mogsev.fragmentapp.R;
 
+import timber.log.Timber;
+
 public class FourthFragment extends Fragment {
-    private static final String TAG = FourthFragment.class.getSimpleName();
 
     public FourthFragment() {
         // Required empty public constructor
@@ -24,10 +25,12 @@ public class FourthFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Timber.i("onCreate");
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        Timber.i("onCreateView");
         return inflater.inflate(R.layout.fragment_fourth, container, false);
     }
 

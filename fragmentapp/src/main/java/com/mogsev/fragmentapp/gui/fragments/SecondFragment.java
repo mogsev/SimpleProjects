@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 
 import com.mogsev.fragmentapp.R;
 import com.mogsev.fragmentapp.databinding.FragmentSecondBinding;
-import com.mogsev.fragmentapp.utils.Logger;
+
+import timber.log.Timber;
 
 public class SecondFragment extends Fragment {
-    private static final String TAG = SecondFragment.class.getSimpleName();
 
     private FragmentSecondBinding mBinding;
 
@@ -30,7 +30,7 @@ public class SecondFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Logger.i(TAG, "onCreate");
+        Timber.i("onCreate");
     }
 
     @Override
