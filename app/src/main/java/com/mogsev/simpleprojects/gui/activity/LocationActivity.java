@@ -1,4 +1,4 @@
-package com.mogsev.simpleprojects.activity;
+package com.mogsev.simpleprojects.gui.activity;
 
 import android.databinding.DataBindingUtil;
 import android.location.LocationListener;

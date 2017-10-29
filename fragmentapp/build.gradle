@@ -45,5 +45,13 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.android.support:support-v4:25.3.1'
     compile 'com.android.support:design:25.3.1'
+
+    // Hawk 2.0 - Secure, simple key-value storage for android,
+    // see more information on https://github.com/orhanobut/hawk
+    compile 'com.orhanobut:hawk:2.0.1'
+
+    // Timber, see more information on https://github.com/JakeWharton/timber
+    compile "com.jakewharton.timber:timber:$TIMBER_VERSION"
+
     testCompile 'junit:junit:4.12'
 }

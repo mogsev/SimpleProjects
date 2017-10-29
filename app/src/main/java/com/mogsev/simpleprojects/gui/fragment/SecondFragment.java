@@ -1,4 +1,4 @@
-package com.mogsev.simpleprojects.fragment;
+package com.mogsev.simpleprojects.gui.fragment;
 
 
 import android.databinding.DataBindingUtil;

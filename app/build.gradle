@@ -60,5 +60,8 @@ dependencies {
     provided 'javax.annotation:jsr250-api:1.0'
     compile 'javax.inject:javax.inject:1'
 
+    // Timber, see more information on https://github.com/JakeWharton/timber
+    compile "com.jakewharton.timber:timber:$TIMBER_VERSION"
+
     testCompile 'junit:junit:4.12'
 }

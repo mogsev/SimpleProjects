@@ -2,12 +2,9 @@ package com.mogsev.fragmentapp;
 
 import android.app.Application;
 
-import com.crashlytics.android.Crashlytics;
 import com.mogsev.fragmentapp.log.CrashReportingTree;
 import com.orhanobut.hawk.Hawk;
-import com.squareup.leakcanary.LeakCanary;
 
-import io.fabric.sdk.android.Fabric;
 import timber.log.Timber;
 import timber.log.Timber.DebugTree;
 
@@ -21,16 +18,6 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
         Timber.i("onCreate");
-
-        if (LeakCanary.isInAnalyzerProcess(this)) {
-            // This process is dedicated to LeakCanary for heap analysis.
-            // You should not init your app in this process.
-            return;
-        }
-        LeakCanary.install(this);
-        // Normal app init code...
-
-        Fabric.with(this, new Crashlytics());
 
         // initialize Timber
         initTimber();

@@ -12,7 +12,7 @@
 
         <variable
             name="fragment"
-            type="com.mogsev.simpleprojects.fragment.FirstFragment" />
+            type="com.mogsev.simpleprojects.gui.fragment.FirstFragment" />
 
     </data>
 
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.mogsev.simpleprojects.fragment.FirstFragment">
+        tools:context=".gui.fragment.FirstFragment">
 
         <ProgressBar
             android:id="@+id/progressBar"

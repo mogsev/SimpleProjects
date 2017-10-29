@@ -1,4 +1,4 @@
-package com.mogsev.simpleprojects.fragment;
+package com.mogsev.simpleprojects.gui.fragment;
 
 
 import android.content.ComponentName;
@@ -16,8 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mogsev.simpleprojects.R;
-import com.mogsev.simpleprojects.activity.LocationActivity;
 import com.mogsev.simpleprojects.databinding.FragmentFirstBinding;
+import com.mogsev.simpleprojects.gui.activity.LocationActivity;
 import com.mogsev.simpleprojects.service.TimeCounterService;
 
 public class FirstFragment extends Fragment implements ServiceConnection {

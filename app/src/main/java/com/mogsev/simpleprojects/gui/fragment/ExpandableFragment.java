@@ -1,11 +1,11 @@
-package com.mogsev.simpleprojects.fragment;
+package com.mogsev.simpleprojects.gui.fragment;
 
 
 import android.databinding.DataBindingUtil;
-import android.databinding.ObservableBoolean;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,18 +24,13 @@ import com.mogsev.simpleprojects.data.entity.Order;
 import com.mogsev.simpleprojects.data.entity.Tariff;
 import com.mogsev.simpleprojects.data.entity.User;
 import com.mogsev.simpleprojects.databinding.FragmentExpandableBinding;
+import com.mogsev.simpleprojects.viewmodel.ExpandableViewModel;
 
 import java.lang.reflect.Type;
 import java.util.List;
 
 public class ExpandableFragment extends Fragment {
     private static final String TAG = ExpandableFragment.class.getSimpleName();
-
-    public final ObservableBoolean mGoodsRvVisible = new ObservableBoolean(false);
-    public final ObservableBoolean mUsersRvVisible = new ObservableBoolean(false);
-    public final ObservableBoolean mTariffsRvVisible = new ObservableBoolean(false);
-    public final ObservableBoolean mOrdersRvVisible = new ObservableBoolean(false);
-    public final ObservableBoolean mFifthRvVisible = new ObservableBoolean(false);
 
     private FragmentExpandableBinding mBinding;
 
@@ -70,8 +65,8 @@ public class ExpandableFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Log.i(TAG, "onActivityCreated");
-        mBinding.setFragment(this);
-
+        mBinding.setModel(new ExpandableViewModel());
+        mBinding.setFirst(mBinding.recyclerViewGoods);
         // initialize recycler view goods
         initGoodsRecyclerView();
 
@@ -83,30 +78,6 @@ public class ExpandableFragment extends Fragment {
 
         // initialize recycler view orders
         initOrdersRecyclerView();
-    }
-
-    public boolean onClickFirst() {
-        Log.i(TAG, "onClickFirst");
-        mGoodsRvVisible.set(!mGoodsRvVisible.get());
-        return true;
-    }
-
-    public boolean onClickSecond() {
-        Log.i(TAG, "onClickSecond");
-        mUsersRvVisible.set(!mUsersRvVisible.get());
-        return true;
-    }
-
-    public boolean onClickTariffs() {
-        Log.i(TAG, "onClickSecond");
-        mTariffsRvVisible.set(!mTariffsRvVisible.get());
-        return true;
-    }
-
-    public boolean onClickOrders() {
-        Log.i(TAG, "onClickOrders");
-        mOrdersRvVisible.set(!mOrdersRvVisible.get());
-        return true;
     }
 
     private void initGoodsRecyclerView() {

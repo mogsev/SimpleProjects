@@ -50,5 +50,8 @@ dependencies {
 
     compile 'com.squareup.picasso:picasso:2.5.2'
 
+    // Timber, see more information on https://github.com/JakeWharton/timber
+    compile "com.jakewharton.timber:timber:$TIMBER_VERSION"
+
     testCompile 'junit:junit:4.12'
 }

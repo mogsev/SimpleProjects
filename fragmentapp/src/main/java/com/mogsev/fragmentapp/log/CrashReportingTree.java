@@ -2,7 +2,6 @@ package com.mogsev.fragmentapp.log;
 
 import android.util.Log;
 
-import com.crashlytics.android.Crashlytics;
 
 import timber.log.Timber;
 
@@ -19,10 +18,6 @@ public class CrashReportingTree extends Timber.Tree {
             return;
         }
 
-        Crashlytics.log(priority, tag, message);
 
-        if (t != null) {
-            Crashlytics.logException(t);
-        }
     }
 }
