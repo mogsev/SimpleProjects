@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import com.mogsev.simpleprojects.R;
 import com.mogsev.simpleprojects.databinding.FragmentFirstBinding;
 import com.mogsev.simpleprojects.gui.activity.LocationActivity;
+import com.mogsev.simpleprojects.gui.activity.TwoWayScrollActivity;
 import com.mogsev.simpleprojects.service.TimeCounterService;
 
 public class FirstFragment extends Fragment implements ServiceConnection {
@@ -130,4 +131,11 @@ public class FirstFragment extends Fragment implements ServiceConnection {
         startActivity(intent);
         return true;
     }
+
+    public boolean openTwoWayScrollActivity() {
+        Intent intent = new Intent(getContext(), TwoWayScrollActivity.class);
+        startActivity(intent);
+        return true;
+    }
+
 }
