@@ -4,6 +4,7 @@
     tools:context="com.mogsev.simpleprojects.gui.activity.TwoWayScrollActivity">
 
     <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -145,11 +146,13 @@
             </LinearLayout>
 
             <HorizontalScrollView
+                android:id="@+id/horizontal_scroll_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="70dp">
 
                 <LinearLayout
+                    android:id="@+id/linear_layout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">

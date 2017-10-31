@@ -63,5 +63,8 @@ dependencies {
     // Timber, see more information on https://github.com/JakeWharton/timber
     compile "com.jakewharton.timber:timber:$TIMBER_VERSION"
 
+    // joda-time-android, se more https://github.com/dlew/joda-time-android
+    compile 'net.danlew:android.joda:2.9.9'
+
     testCompile 'junit:junit:4.12'
 }

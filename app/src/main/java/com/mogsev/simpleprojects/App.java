@@ -5,6 +5,8 @@ import android.support.v4.app.FragmentManager;
 import com.mogsev.basecontent.BaseApplication;
 import com.mogsev.basecontent.logs.CrashReportingTree;
 
+import net.danlew.android.joda.JodaTimeAndroid;
+
 import timber.log.Timber;
 
 /**
@@ -28,6 +30,9 @@ public class App extends BaseApplication {
         //startService(new Intent(this, TimeCounterService.class));
 
         //startService(new Intent(this, MainService.class));
+
+        // Joda-time must initialize the library before using
+        JodaTimeAndroid.init(this);
     }
 
     private void initTimber() {
