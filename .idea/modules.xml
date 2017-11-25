@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/basecontent/basecontent.iml" filepath="$PROJECT_DIR$/basecontent/basecontent.iml" />
       <module fileurl="file://$PROJECT_DIR$/fragmentapp/fragmentapp.iml" filepath="$PROJECT_DIR$/fragmentapp/fragmentapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/screenblurexample/screenblurexample.iml" filepath="$PROJECT_DIR$/screenblurexample/screenblurexample.iml" />
       <module fileurl="file://$PROJECT_DIR$/settingsapplication/settingsapplication.iml" filepath="$PROJECT_DIR$/settingsapplication/settingsapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/simpleforegroundservice/simpleforegroundservice.iml" filepath="$PROJECT_DIR$/simpleforegroundservice/simpleforegroundservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/testapplication/testapplication.iml" filepath="$PROJECT_DIR$/testapplication/testapplication.iml" />
