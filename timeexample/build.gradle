@@ -50,6 +50,10 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
+    // RxJava2
+    implementation "io.reactivex.rxjava2:rxjava:$RXJAVA_VERSION"
+    implementation "io.reactivex.rxjava2:rxandroid:$RXANDROID_VERSION"
+
     // Timber, see more information on https://github.com/JakeWharton/timber
     implementation "com.jakewharton.timber:timber:$TIMBER_VERSION"
 
