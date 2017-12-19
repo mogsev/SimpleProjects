@@ -42,6 +42,8 @@ ext {
     RXJAVA_VERSION = '2.1.6'
     RXANDROID_VERSION = '2.0.1'
 
+    RETROFIT_VERSION = '2.3.0'
+
     TIMBER_VERSION = '4.5.1'
     GLIDE_VERSION = '4.2.0'
 
