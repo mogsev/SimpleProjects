@@ -1,4 +1,4 @@
-package com.mogsev.basecontent.binding;
+package com.mogsev.basecontent.databinding;
 
 import android.databinding.BindingAdapter;
 import android.graphics.drawable.Drawable;

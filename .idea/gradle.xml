@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/testapplication" />
             <option value="$PROJECT_DIR$/testrestapi" />
             <option value="$PROJECT_DIR$/timeexample" />
+            <option value="$PROJECT_DIR$/webformapplication" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -7,13 +7,12 @@
       <module fileurl="file://$PROJECT_DIR$/basecontent/basecontent.iml" filepath="$PROJECT_DIR$/basecontent/basecontent.iml" />
       <module fileurl="file://$PROJECT_DIR$/fragmentapp/fragmentapp.iml" filepath="$PROJECT_DIR$/fragmentapp/fragmentapp.iml" />
       <module fileurl="file://$PROJECT_DIR$/screenblurexample/screenblurexample.iml" filepath="$PROJECT_DIR$/screenblurexample/screenblurexample.iml" />
-      <module fileurl="file://E:\StudioProjects\SimpleProjects\screenblurexample\screenblurexample.iml" filepath="E:\StudioProjects\SimpleProjects\screenblurexample\screenblurexample.iml" />
       <module fileurl="file://$PROJECT_DIR$/settingsapplication/settingsapplication.iml" filepath="$PROJECT_DIR$/settingsapplication/settingsapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/simpleforegroundservice/simpleforegroundservice.iml" filepath="$PROJECT_DIR$/simpleforegroundservice/simpleforegroundservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/testapplication/testapplication.iml" filepath="$PROJECT_DIR$/testapplication/testapplication.iml" />
       <module fileurl="file://$PROJECT_DIR$/testrestapi/testrestapi.iml" filepath="$PROJECT_DIR$/testrestapi/testrestapi.iml" />
       <module fileurl="file://$PROJECT_DIR$/timeexample/timeexample.iml" filepath="$PROJECT_DIR$/timeexample/timeexample.iml" />
-      <module fileurl="file://E:\StudioProjects\SimpleProjects\timeexample\timeexample.iml" filepath="E:\StudioProjects\SimpleProjects\timeexample\timeexample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webformapplication/webformapplication.iml" filepath="$PROJECT_DIR$/webformapplication/webformapplication.iml" />
     </modules>
   </component>
 </project>

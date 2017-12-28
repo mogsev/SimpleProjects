@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="refresh_layout_colors">
+        <item>@color/colorBlue500</item>
+        <item>@color/colorPink500</item>
+        <item>@color/colorOrange500</item>
+        <item>@color/colorGreen500</item>
+        <item>@color/colorRed500</item>
+    </array>
+
+</resources>
