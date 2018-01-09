@@ -55,6 +55,11 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxjava:$RXJAVA_VERSION"
     implementation "io.reactivex.rxjava2:rxandroid:$RXANDROID_VERSION"
 
+    // Retrofit 2
+    compile 'com.squareup.retrofit2:retrofit:2.+'
+    compile 'com.squareup.retrofit2:converter-gson:2.+'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.+'
+
     // Timber, see more information on https://github.com/JakeWharton/timber
     implementation "com.jakewharton.timber:timber:$TIMBER_VERSION"
 
